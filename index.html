@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Exam</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="images/react-1-282599.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!--                    Side Nav start                 -->
+    <nav>
+      <div class="nav-container position-relative">
+        <div id="hidden-nav">
+          <div class="nav-links">
+            <ul>
+              <li id="nowPlaying"><a href="#">Now playing</a></li>
+              <li id="popular"><a href="#">Popular</a></li>
+              <li id="topRated"><a href="#">Top Rated</a></li>
+              <li id="trending"><a href="#">Trending</a></li>
+              <li id="upcoming"><a href="#">Upcoming</a></li>
+              <li id="popular"><a href="#contact-us">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="nav-footer pb-3">
+            <div class="py-3 px-3">
+              <i class="fab fa-facebook mx-1"></i>
+              <i class="fab fa-twitter-square mx-1"></i>
+              <i class="fas fa-globe mx-1"></i>
+            </div>
+            <div>
+              <p class="text-secondary px-2">
+                Copyright Â© 2019 All Rights Reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+        <aside
+          class="
+            py-3
+            d-flex
+            flex-column
+            justify-content-between
+            align-items-center
+            text-center
+            left
+          "
+        >
+          <div class="aside-icon">
+            <img src="images/logo.png" class="w-50" alt="" />
+          </div>
+
+          <div class="aside-hamburger-icon">
+            <button id="hamburger-icon">
+              <i class="fas fa-bars fs-3"></i>
+            </button>
+            <button id="close-icon">
+              <i class="fas fa-times fs-3"></i>
+            </button>
+          </div>
+          <div class="aside-links d-flex flex-column justify-content-between">
+            <i class="fas fa-globe my-2"></i>
+            <i class="fas fa-share-alt my-2"></i>
+          </div>
+        </aside>
+      </div>
+    </nav>
+
+    <!--                    Side Nav End                 -->
+
+    <!--                    Main section starts                 -->
+
+    <main class="pt-3 m-auto">
+      <div class="container">
+        <div class="search-bars pt-5">
+          <input
+            id="search-database"
+            type="text"
+            class="
+              form-control
+              text-center
+              border-2 border-bottom border-secondary
+            "
+            placeholder="get movies by word..."
+          />
+          <input
+            id="current-list"
+            type="text"
+            class="
+              form-control
+              text-center
+              border-2 border-bottom border-secondary
+            "
+            placeholder="search displayed movies."
+          />
+        </div>
+        <div class="movies-container py-5">
+          <div class="row" id="moviesData"></div>
+        </div>
+      </div>
+    </main>
+
+    <!--                    Main section End                 -->
+
+    <!--                    footer  start                 -->
+
+    <footer class="py-5" id="contact-us">
+      <div class="container">
+        <h2 class="text-white fw-lighter">Contact Us...</h2>
+        <div class="contact-us-forms row">
+          <div class="col-md-6 pt-2">
+            <input
+              id="name"
+              type="text"
+              class="
+                form-control
+                text-center
+                border-2 border-bottom border-secondary
+              "
+              placeholder="Enter Your Name"
+            />
+            <div id="name-error" class="text-center p-1">
+              <p>Enter a valid Name</p>
+            </div>
+          </div>
+          <div class="col-md-6 pt-2">
+            <input
+              id="email"
+              type="email"
+              class="
+                form-control
+                text-center
+                border-2 border-bottom border-secondary
+              "
+              placeholder="Enter Email"
+            />
+            <div id="email-error" class="text-center p-1">
+              <p>Enter a valid Email</p>
+            </div>
+          </div>
+          <div class="col-md-6 pt-2">
+            <input
+              id="phone"
+              type="text"
+              class="
+                form-control
+                text-center
+                border-2 border-bottom border-secondary
+              "
+              placeholder="Enter phone"
+            />
+            <div id="phone-error" class="text-center p-1">
+              <p>Enter a valid Egyptian phone</p>
+            </div>
+          </div>
+          <div class="col-md-6 pt-2">
+            <input
+              id="age"
+              type="text"
+              class="
+                form-control
+                text-center
+                border-2 border-bottom border-secondary
+              "
+              placeholder="Enter Age"
+            />
+            <div id="age-error" class="text-center p-1">
+              <p>Enter a valid age</p>
+            </div>
+          </div>
+          <div class="col-md-6 pt-2">
+            <input
+              id="password"
+              type="password"
+              class="
+                form-control
+                text-center
+                border-2 border-bottom border-secondary
+              "
+              placeholder="Enter Password"
+            />
+            <div id="password-error" class="text-center p-1">
+              <p>
+                enter valid password *Minimum eight characters, at least one
+                letter and one number no special characters allowed*
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 pt-2">
+            <input
+              id="repassword"
+              type="password"
+              class="
+                form-control
+                text-center
+                border-2 border-bottom border-secondary
+              "
+              placeholder="Enter Password again"
+            />
+            <div id="repassword-error" class="text-center p-1">
+              <p>Passwords dont match</p>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-outline-danger my-3">Submit</button>
+      </div>
+    </footer>
+
+    <!--                    footer  End                 -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
